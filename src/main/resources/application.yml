@@ -1,0 +1,27 @@
+server:
+  port: 8761
+
+management:
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: '*'
+
+
+eureka:
+  instance:
+    hostname: eureka-service
+    appname: eureka-cluster
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-service:${server.port}/eureka
+    register-with-eureka: true
+    fetch-registry: true
+
