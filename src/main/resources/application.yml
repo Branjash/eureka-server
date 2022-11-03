@@ -1,31 +1,11 @@
-server:
-  port: 8761
-
-management:
-  endpoint:
-    health:
-      enabled: true
-      show-details: always
-    shutdown:
-      enabled: true
-  endpoints:
-    web:
-      base-path: /
-      exposure:
-        include: '*'
-
 spring:
+
   application:
-    name: eureka-discovery-service
+    name: eureka-service
 
+  cloud:
+    config:
+      uri: http://service-configurations:8888
 
-eureka:
-  instance:
-    hostname: eureka-service
-
-  client:
-    serviceUrl:
-      defaultZone: http://eureka-service:${server.port}/eureka
-    register-with-eureka: true
-    fetch-registry: true
-
+  config:
+    import: optional:configserver:http://service-configurations:8888
