@@ -2,6 +2,11 @@
 
 ## Netflix Eureka service registry aplication using `Spring Boot`
 ### Enabling API Gateway for [reesource-processor](https://github.com/Branjash/resource-processor) application  with - [Eureka Client](https://github.com/Branjash/eureka-client)
+
+### Prerequisites: 
+
+- Docker engine installed 
+- OPTIONAL: `maven` installed, use embbeded wrapper instead
     
 ### Startup
 
