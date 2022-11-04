@@ -19,8 +19,10 @@
      ```bash
      docker build -t eureka-server-local-image .
      ```
+   
+  4. Container can/will be started once [resource-processor-service](https://github.com/Branjash/resource-processor) `docker-compose` file is triggered 
     
-  4. Finally you can chech if the containers are running and check logs to if they are running properly
+  5. Finally you can chech if the containers are running and check logs to if they are running properly
   
      - Check is application working by navigation through your browser to URL - `http://localhost:8761/eureka/apps` <br>
        You should see something like the image bellow, once the [Eureka Client](https://github.com/Branjash/eureka-client) is started successfully <br>
